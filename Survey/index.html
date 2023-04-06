@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Survey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div id="navbar" class="navbar">
+    <div class="progress">
+      <div class="bar" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <div id="survey-container" class="surveyInfo">
+    <h2>Oracle survey</h2>
+    <p class="surveyText">Welcome to the Your Voice Employee Survey. This survey is an opportunity to vice your views
+      about working at
+      Oracle, how the business is operating, and how it can be more productive. your insights are importan to the
+      management team, and jey finding from the survey will be used to help the organization continue to improve its
+      effectiveness.</p>
+
+    <p class="surveyText">Every item in the survey provides an opportinity for you to add comments. just hover blow your
+      selected rating
+      to show the '+comment' button and click it to add a comment. Once is finished, please be sure to 'click' the
+      save button, otherwise yourresponse will not be submitted to Glint. your comments will be reported exactly as
+      you write them if at least 15 people respond to a questiion. Take care not to identify yourself or others in
+      your comments with the words or languages you use.</p>
+
+    <p class="surveyText">Note: if you have witnessed or suspected a violation of Oracle's code of ethics annd Business
+      Conduct, please
+      report it through Oracle's Compliance and Ethics helpline via phone or by using the online Website. Your HR
+      representative is another contact point. Due to the confidential nature of the survey, Oracle will not be able
+      to act on such issues raised in your comments here</p>
+
+    <br>
+
+    <button href="#" class="start-button">Start Survey</button>
+  </div>
+
+  <div class="container">
+    <form id="survey-form">
+      <fieldset class="question">
+        <legend>Question 1:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question1" value="1"></label>
+        <label><input type="radio" name="question1" value="2"></label>
+        <label><input type="radio" name="question1" value="3"></label>
+        <label><input type="radio" name="question1" value="4"></label>
+        <label><input type="radio" name="question1" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-1" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-1" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 2:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question2" value="1"></label>
+        <label><input type="radio" name="question2" value="2"></label>
+        <label><input type="radio" name="question2" value="3"></label>
+        <label><input type="radio" name="question2" value="4"></label>
+        <label><input type="radio" name="question2" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-2" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-2" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 3:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question3" value="1"></label>
+        <label><input type="radio" name="question3" value="2"></label>
+        <label><input type="radio" name="question3" value="3"></label>
+        <label><input type="radio" name="question3" value="4"></label>
+        <label><input type="radio" name="question3" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-3" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-3" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 4:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question4" value="1"></label>
+        <label><input type="radio" name="question4" value="2"></label>
+        <label><input type="radio" name="question4" value="3"></label>
+        <label><input type="radio" name="question4" value="4"></label>
+        <label><input type="radio" name="question4" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-4" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-4" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 5:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question5" value="1"></label>
+        <label><input type="radio" name="question5" value="2"></label>
+        <label><input type="radio" name="question5" value="3"></label>
+        <label><input type="radio" name="question5" value="4"></label>
+        <label><input type="radio" name="question5" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-5" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-5" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 6:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question6" value="1"></label>
+        <label><input type="radio" name="question6" value="2"></label>
+        <label><input type="radio" name="question6" value="3"></label>
+        <label><input type="radio" name="question6" value="4"></label>
+        <label><input type="radio" name="question6" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-6" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-6" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 7:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question7" value="1"></label>
+        <label><input type="radio" name="question7" value="2"></label>
+        <label><input type="radio" name="question7" value="3"></label>
+        <label><input type="radio" name="question7" value="4"></label>
+        <label><input type="radio" name="question7" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-7" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-7" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 8:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question8" value="1"></label>
+        <label><input type="radio" name="question8" value="2"></label>
+        <label><input type="radio" name="question8" value="3"></label>
+        <label><input type="radio" name="question8" value="4"></label>
+        <label><input type="radio" name="question8" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-8" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-8" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 9:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question9" value="1"></label>
+        <label><input type="radio" name="question9" value="2"></label>
+        <label><input type="radio" name="question9" value="3"></label>
+        <label><input type="radio" name="question9" value="4"></label>
+        <label><input type="radio" name="question9" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button type="button" onclick="skipQuestion()">Skip</button>
+        <button type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-9" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-9" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+      <fieldset class="question">
+        <legend>Question 10:
+        </legend>
+        <br>
+        <p class="questionText">I have customer information needed to proactively help customers achieve their goals
+          with Oracle</p>
+        <br>
+        <span>Strongly Disagree</span>
+        <label><input type="radio" name="question10" value="1"></label>
+        <label><input type="radio" name="question10" value="2"></label>
+        <label><input type="radio" name="question10" value="3"></label>
+        <label><input type="radio" name="question10" value="4"></label>
+        <label><input type="radio" name="question10" value="5"></label>
+        <span> Strongly agree</span>
+        <br>
+        <br>
+        <button id="lastBtn" type="button" onclick="nextQuestion()">Next</button>
+        <br>
+        <br>
+        <button type="button" onclick="toggleComment(event)">Add Comment</button>
+        <div id="comment-container" class="comentContainer">
+          <br>
+          <textarea id="comment-10" class="comment" style="display: none;"></textarea>
+          <br>
+          <button id="saveButton-10" type="button" onclick="saveComment()" style="display: none;">Save Comment</button>
+        </div>
+      </fieldset>
+    </form>
+    <div id="submit-results-container" class="submitContainer">
+      <button type="submit" id="submit-results-button" class="submitBtn">Submit</button>
+    </div>
+  </div>
+
+  <div id="results-container" class="resultsContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
